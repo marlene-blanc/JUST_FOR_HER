@@ -1,0 +1,9 @@
+<h1> Create a donation </h1>
+
+ <%= simple_form_for @donation do |f| %>
+  <%  @products.all.each do |product| %>
+      <input type="checkbox" id="<%= product.category %>" name="products[<%= product.category %>]" value="<%= product.id %>" >
+      <label for="<%= product.category %>"><%= product.category %></label>
+  <% end %>
+    <%= f.submit %>
+  <% end %>
