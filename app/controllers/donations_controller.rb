@@ -8,14 +8,29 @@ class DonationsController < ApplicationController
 
   def create
     @donation = Donation.new
-    @donation.products = Product.find(params["products"].values.map(&:to_i))
     @donation.user = current_user
+    @donation.save
+    params["products"].each do |product_id_str, quantity_str|
+      quantity = quantity_str.to_i
+      if quantity > 0
+        product_to_add = Product.find(product_id_str.to_i)
+        DonatedProduct.create(
+          product: product_to_add,
+          donation: @donation,
+          quantity: quantity
+        )
+      end
+    end
 
     if @donation.save!
-       redirect_to donation_select_warehouse_path(@donation)
+       redirect_to donation_deposit_option_path(@donation)
     else
       render :new, status: :unprocessable_entity
     end
+  end
+
+  def deposit_option
+    @donation = Donation.find(params[:donation_id])
   end
 
   def select_warehouse
@@ -30,20 +45,14 @@ class DonationsController < ApplicationController
         image_url: helpers.asset_url("logo.png")
       }
     end
-    
+  end
+
   def update_warehouse
-    @warehouse = Warehouse.new(warehouse_params)
-    @warehouse.update(params[:donation_id])
+    @donation = Donation.find(params[:donation_id])
+    @donation.update(params[:warehouse_id])
   end
 
   def list
     @products = Product.all
   end
-
-private
-
-  def warehouse_params
-    params.require(:warehouse).permit(:user_id, :address)
-  end
 end
-
