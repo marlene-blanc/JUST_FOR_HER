@@ -1,1 +1,22 @@
 // Specific CSS for your home-page
+
+#home_title{
+  margin-top: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.buttons{
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 40px;
+
+}
+
+.row{
+  background-color: white;
+  height: max-content;
+}
+.p_home{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
