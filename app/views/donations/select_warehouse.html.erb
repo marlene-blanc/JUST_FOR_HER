@@ -1,0 +1,9 @@
+
+<% @warehouses.each do |w| %>
+  <%= form_with url: donation_select_warehouse_path(@donation), method: :patch do |f| %>
+    <%= f.hidden_field :warehouse_id, value: w.id %>
+    <div class="product_submit">
+      <%= f.submit w.name %>
+    </div>
+  <% end %>
+<% end %>
