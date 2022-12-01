@@ -1,0 +1,44 @@
+.recap-container {
+  text-align: center;
+  margin: 20px;
+  h2 {
+    color: white;
+    margin-bottom: 40px;
+  }
+}
+
+.recap-cards {
+  display: flex;
+}
+
+.recap-card {
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: white;
+  color: $purple;
+  height: 150px;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.recap-card-long {
+  display: flex;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: white;
+  color: $purple;
+  height: 200px;
+  padding: 20px;
+  margin-bottom: 40px;
+}
+
+.btn-recap {
+  color: white;
+  text-decoration: none;
+  border: 1px solid white;
+  padding: 10px 28px;
+  border-radius: 50px;
+  &:hover {
+    color: black;
+  }
+}

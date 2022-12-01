@@ -1,25 +1,34 @@
-<div>
+<div class="recap-container">
   <h2>Récapitulatif de votre donation</h2>
 
-  <div style="display: flex">
-    <div>
-      <%= @donation.amount %>
+  <div class="recap-cards justify-content-center">
+    <div class="col-6 col-lg-3">
+      <div class="recap-card" style="margin-right: 10px">
+        <%# <%= @donation.products.category %>
+        <%= @donation.amount %>
+      </div>
     </div>
-    <div>
-      <%= @donation.warehouse.name %>
+    <div class="col-6 col-lg-3">
+      <div class="recap-card">
+        <%= @donation.warehouse.name %>
+      </div>
     </div>
   </div>
 
-  <div>
-    <%= @donation.warehouse.address %>
-    <p>Horaires d'ouverture :</p>
-    <p>Coordonnées :</p>
-    <% if @donation.number %>
-      <%= @donation.number %>
-    <% end %>
+  <div class="recap-card-long justify-content-center">
+    <div class="col-12 col-lg-6">
+      <%= @donation.warehouse.address %>
+      <p>Horaires d'ouverture :</p>
+      <p>Coordonnées :</p>
+      <% if @donation.warehouse.number %>
+        <%= @donation.warehouse.number %>
+      <% end %>
+    </div>
   </div>
 
-  <div>
-    <% link_to "Confirmation", donation_path(@donation), class: "btn btn-ghost" %>
+  <div class="row justify-content-center" style="background-color: #900C3F">
+    <div class="col-12 col-lg-6">
+      <%= link_to "Confirmation", root_path, class: "btn-recap" %>
+    </div>
   </div>
 </div>
