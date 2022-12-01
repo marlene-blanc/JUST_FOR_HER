@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: "pages#home"
   get "deposit_option", to: "pages#deposit_option"
 
-  resources :donations, only: %i[new create] do
+  resources :donations, only: %i[new create show] do
 
     get "/select_warehouse", to: "donations#select_warehouse"
     patch "/select_warehouse", to: "donations#update_warehouse"

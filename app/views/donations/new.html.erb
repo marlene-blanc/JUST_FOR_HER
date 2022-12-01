@@ -12,6 +12,7 @@
         <%  @products.all.each do |product| %>
             <input type="checkbox" id="<%= product.category %>" name="products[<%= product.category %>]" value="<%= product.id %>" >
             <label for="<%= product.category %>"><%= product.category %></label>
+            <input type="number" value="Number of products">
         <% end %>
         <div class="product_submit">
           <%= f.submit %>

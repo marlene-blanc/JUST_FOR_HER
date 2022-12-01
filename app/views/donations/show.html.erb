@@ -1,0 +1,25 @@
+<div>
+  <h2>Récapitulatif de votre donation</h2>
+
+  <div style="display: flex">
+    <div>
+      <%= @donation.amount %>
+    </div>
+    <div>
+      <%= @donation.warehouse.name %>
+    </div>
+  </div>
+
+  <div>
+    <%= @donation.warehouse.address %>
+    <p>Horaires d'ouverture :</p>
+    <p>Coordonnées :</p>
+    <% if @donation.number %>
+      <%= @donation.number %>
+    <% end %>
+  </div>
+
+  <div>
+    <% link_to "Confirmation", donation_path(@donation), class: "btn btn-ghost" %>
+  </div>
+</div>
