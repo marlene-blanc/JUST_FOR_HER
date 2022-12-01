@@ -1,9 +1,23 @@
-<h1> Create a donation </h1>
 
- <%= simple_form_for @donation do |f| %>
-  <%  @products.all.each do |product| %>
-      <input type="checkbox" id="<%= product.category %>" name="products[<%= product.category %>]" value="<%= product.id %>" >
-      <label for="<%= product.category %>"><%= product.category %></label>
-  <% end %>
-    <%= f.submit %>
-  <% end %>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-12 col-lg-6">
+
+      <h1 id="new_title"> Create a donation </h1>
+
+      <p>Merci pour votre initiative <%= current_user.first_name %> ! Ici vous pourrez choisir votre modalité de don ainsi que les articles que vous allez donner</p>
+
+
+      <%= simple_form_for @donation do |f| %>
+        <%  @products.all.each do |product| %>
+            <input type="checkbox" id="<%= product.category %>" name="products[<%= product.category %>]" value="<%= product.id %>" >
+            <label for="<%= product.category %>"><%= product.category %></label>
+        <% end %>
+        <div class="product_submit">
+          <%= f.submit %>
+        </div>
+        <% end %>
+
+    </div>
+  </div>
+</div>
