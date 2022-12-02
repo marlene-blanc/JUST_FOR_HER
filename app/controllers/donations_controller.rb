@@ -34,7 +34,6 @@ class DonationsController < ApplicationController
   end
 
   def select_warehouse
-
     @warehouses = Warehouse.all
     @donation = Donation.find(params[:donation_id])
     @markers = @warehouses.geocoded.map do |warehouse|

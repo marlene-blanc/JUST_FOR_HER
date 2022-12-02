@@ -2,8 +2,11 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "pages#home"
 
-  resources :donations, only: %i[new create] do
+
+
+  resources :donations, only: %i[new create show] do
     get "/deposit_option", to: "donations#deposit_option"
+
     get "/select_warehouse", to: "donations#select_warehouse"
     patch "/select_warehouse", to: "donations#update_warehouse"
   end
