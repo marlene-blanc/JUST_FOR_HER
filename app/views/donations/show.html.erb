@@ -37,7 +37,11 @@
 
   <div class="justify-content-center">
     <div class="col-12 col-lg-6">
-      <%= link_to "Confirmation", root_path, class: "btn-recap" %>
+      <%= form_with url: donation_confirm_path(@donation), method: :patch do |f| %>
+        <div class="product_submit">
+          <%= f.submit "Confirmer 👍" %>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>

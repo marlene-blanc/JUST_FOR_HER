@@ -59,6 +59,15 @@ class DonationsController < ApplicationController
     end
   end
 
+  def confirm
+    @donation = Donation.find(params[:donation_id])
+    if @donation.update(confirm: true)
+      redirect_to root_path
+    else
+      render :show
+    end
+  end
+
   def list
     @products = Product.all
   end
