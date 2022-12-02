@@ -19,16 +19,22 @@
 
   <div class="recap-card-long justify-content-center">
     <div class="col-12 col-lg-6">
-      <p>Adresse du dépôt :</p>
-      <%= @donation.warehouse.address %>
-      <p>Horaires d'ouverture :</p>
-      <% if @donation.warehouse.opening_hours %>
-        <%= @donation.warehouse.opening_hours %>
-      <% end %>
-      <p>Coordonnées :</p>
-      <% if @donation.warehouse.number %>
-        <%= @donation.warehouse.number %>
-      <% end %>
+      <div style="margin-bottom: 6px">
+        <p>Adresse du dépôt :</p>
+        <%= @donation.warehouse.address %>
+      </div>
+      <div style="margin-bottom: 6px">
+        <p>Horaires d'ouverture :</p>
+        <% if @donation.warehouse.opening_hours %>
+          <%= @donation.warehouse.opening_hours %>
+        <% end %>
+      </div>
+      <div>
+        <p>Coordonnées :</p>
+        <% if @donation.warehouse.number %>
+          <%= @donation.warehouse.number %>
+        <% end %>
+      </div>
     </div>
   </div>
 
