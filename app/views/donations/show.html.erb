@@ -7,6 +7,9 @@
         <%# <%= @donation.products.category %>
         <p>Le nombre de produits :</p>
         <%= @donation.amount %>
+        <% @donation.donated_products.each do |dp| %>
+          <p><%= dp.product.category %> * <%= dp.quantity %> unités</p>
+        <% end %>
       </div>
     </div>
     <div class="col-6 col-lg-3">
@@ -40,7 +43,11 @@
 
   <div class="justify-content-center">
     <div class="col-12 col-lg-6">
-      <%= link_to "Confirmation", root_path, class: "btn-recap" %>
+      <%= form_with url: donation_confirm_path(@donation), method: :patch do |f| %>
+        <div class="product_submit">
+          <%= f.submit "Confirmer 👍" %>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>

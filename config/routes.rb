@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
     get "/select_warehouse", to: "donations#select_warehouse"
     patch "/select_warehouse", to: "donations#update_warehouse"
+    patch "/confirm", to: "donations#confirm"
   end
   #get "select_warehouse", to: "donations#select_warehouse"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
