@@ -7,10 +7,11 @@
 
         <ul class="deposit_buttons">
           <div class="bouton_depôt">
-            <%= link_to "Deliver to a depot", new_donation_path , class: "btn btn-ghost" %>
+            <%= link_to "Deliver to a depot", donation_select_warehouse_path(@donation), class: "btn btn-ghost" %>
           </div>
           <div class="bouton_particulier">
-            <%= link_to "Give directly to someone", new_donation_path, class: "btn btn-ghost" %>
+            <%= ink_to "Give directly to someone", donation_select_warehouse_path(@donation), class: "btn btn-ghost" %>
+
           </div>
           <div class= "button_back_products">
             <%= link_to "Retour aux produits", new_donation_path, class: "btn btn-ghost" %>
