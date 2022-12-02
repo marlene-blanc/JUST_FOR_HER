@@ -19,7 +19,6 @@ class DonationsController < ApplicationController
   end
 
   def select_warehouse
-
     @warehouses = Warehouse.all
     @donation = Donation.find(params[:donation_id])
     @markers = @warehouses.geocoded.map do |warehouse|
@@ -30,7 +29,8 @@ class DonationsController < ApplicationController
         image_url: helpers.asset_url("logo.png")
       }
     end
-    
+  end
+
   def update_warehouse
     @warehouse = Warehouse.new(warehouse_params)
     @warehouse.update(params[:donation_id])
@@ -46,4 +46,3 @@ private
     params.require(:warehouse).permit(:user_id, :address)
   end
 end
-
