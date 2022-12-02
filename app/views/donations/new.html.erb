@@ -7,7 +7,6 @@
         <h1 id="new_title"> Create a donation </h1>
 
         <p>Merci pour votre initiative <%= current_user.first_name %> ! Ici vous pourrez choisir votre modalité de don ainsi que les articles que vous allez donner</p>
-
           <div class="cards">
             <%= simple_form_for @donation do |f| %>
               <%  @products.all.each do |product| %>
@@ -21,7 +20,6 @@
             <%= f.submit %>
           </div>
           <% end %>
-
       </div>
   </div>
 </div>

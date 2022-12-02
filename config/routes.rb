@@ -2,8 +2,6 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "pages#home"
 
-
-
   resources :donations, only: %i[new create show] do
     get "/deposit_option", to: "donations#deposit_option"
 

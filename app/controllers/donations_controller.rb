@@ -1,4 +1,7 @@
 class DonationsController < ApplicationController
+  def show
+    @donation = Donation.find(params[:id])
+  end
 
   def new
     @products = Product.all
@@ -53,5 +56,11 @@ class DonationsController < ApplicationController
 
   def list
     @products = Product.all
+  end
+
+  private
+
+  def warehouse_params
+    params.require(:warehouse).permit(:user_id, :address)
   end
 end
