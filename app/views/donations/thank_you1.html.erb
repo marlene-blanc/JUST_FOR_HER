@@ -1,16 +1,42 @@
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-12 col-lg-6">
-        <div class="Thank">
+      <div class="thank_texts">
+        <div>
           <p>Thanks <%= current_user.first_name %>!
           Thanks to you, since November 21, we have helped 150 women. A total of 320 products distributed.</p>
         </div>
         <div>
           <p>You can also contribute financially by submitting your donation directly on the platform:</p>
         </div>
+      </div>
         <div class="bouton_no_financial_gift">
           <%= link_to "No contribution financial", new_donation_path , class: "btn btn-ghost" %>
         </div>
+        <div class="financial_suggestion_text">
+        <p>Please select the amount of your contribution:</p>
+        </div>
+
+          <div class="label_5">
+              <div class="input-group-text">
+                <input type="radio" aria-label="Radio button for following text input">
+              </div>
+              <p class="5">5€</p>
+          </div>
+          <div class="label_5">
+              <div class="input-group-text">
+                <input type="radio" aria-label="Radio button for following text input">
+              </div>
+              <p class="5">10€</p>
+          </div>
+          <div class="label_5">
+              <div class="input-group-text">
+                <input type="radio" aria-label="Radio button for following text input">
+              </div>
+              <p class="5">20€</p>
+          </div>
+
+
     </div>
   </div>
 </div>
