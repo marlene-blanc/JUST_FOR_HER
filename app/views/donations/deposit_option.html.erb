@@ -2,9 +2,7 @@
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-12 col-lg-6">
-
-      <h1 id="deposit_title"> Comment je donne ? </h1>
-
+        <h1 class="home_title"> How do I donate? </h1>
         <ul class="deposit_buttons">
           <div class="bouton_depôt">
             <%= link_to "Deliver to a depot", donation_select_warehouse_path(@donation), class: "btn btn-ghost" %>
@@ -14,7 +12,7 @@
 
           </div>
           <div class= "button_back_products">
-            <%= link_to "Retour aux produits", new_donation_path, class: "btn btn-ghost" %>
+            <%= link_to "Back to products", new_donation_path, class: "btn btn-ghost" %>
           </div>
         </ul>
     </div>

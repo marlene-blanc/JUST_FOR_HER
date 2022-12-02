@@ -1,11 +1,10 @@
 <div class="recap-container">
-  <h2>Récapitulatif de votre donation</h2>
-
+  <h1 class="home_title">Summary of your donation</h1>
   <div class="recap-cards justify-content-center">
     <div class="col-6 col-lg-3">
       <div class="recap-card" style="margin-right: 10px">
         <%# <%= @donation.products.category %>
-        <p>Le nombre de produits :</p>
+        <p>Number of products :</p>
         <%= @donation.amount %>
         <% @donation.donated_products.each do |dp| %>
           <p><%= dp.product.category %> * <%= dp.quantity %> unités</p>
@@ -14,7 +13,7 @@
     </div>
     <div class="col-6 col-lg-3">
       <div class="recap-card">
-        <p>Le lieu de dépôt :</p>
+        <p>Place of deposit :</p>
         <%= @donation.warehouse.name %>
       </div>
     </div>
@@ -23,17 +22,17 @@
   <div class="recap-card-long justify-content-center">
     <div class="col-12 col-lg-6">
       <div style="margin-bottom: 6px">
-        <p>Adresse du dépôt :</p>
+        <p>Address of the deposit :</p>
         <%= @donation.warehouse.address %>
       </div>
       <div style="margin-bottom: 6px">
-        <p>Horaires d'ouverture :</p>
+        <p>Opening hours :</p>
         <% if @donation.warehouse.opening_hours %>
           <%= @donation.warehouse.opening_hours %>
         <% end %>
       </div>
       <div>
-        <p>Coordonnées :</p>
+        <p>Contact details:</p>
         <% if @donation.warehouse.number %>
           <%= @donation.warehouse.number %>
         <% end %>
