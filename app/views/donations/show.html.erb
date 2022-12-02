@@ -7,6 +7,9 @@
         <%# <%= @donation.products.category %>
         <p>Le nombre de produits :</p>
         <%= @donation.amount %>
+        <% @donation.donated_products.each do |dp| %>
+          <p><%= dp.product.category %> * <%= dp.quantity %> unités</p>
+        <% end %>
       </div>
     </div>
     <div class="col-6 col-lg-3">

@@ -43,7 +43,7 @@ class DonationsController < ApplicationController
       {
         lat: warehouse.latitude,
         lng: warehouse.longitude,
-        info_window: render_to_string(partial: "info_window", locals: { warehouse: warehouse }),
+        info_window: render_to_string(partial: "info_window", locals: { warehouse: warehouse, donation: @donation}),
         image_url: helpers.asset_url("logo.png")
       }
     end
@@ -51,7 +51,12 @@ class DonationsController < ApplicationController
 
   def update_warehouse
     @donation = Donation.find(params[:donation_id])
-    @donation.update(params[:warehouse_id])
+    @warehouse = Warehouse.find(params[:warehouse_id].to_i)
+    if @donation.update(warehouse: @warehouse)
+      redirect_to @donation
+    else
+      render :select_warehouse
+    end
   end
 
   def list
