@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   end
   #get "select_warehouse", to: "donations#select_warehouse"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
+  get "/thank_you1", to: "donations#thank_you1"
   # Defines the root path route ("/")
   # root "articles#index"
 end

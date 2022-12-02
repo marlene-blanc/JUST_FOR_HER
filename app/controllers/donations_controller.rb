@@ -62,7 +62,7 @@ class DonationsController < ApplicationController
   def confirm
     @donation = Donation.find(params[:donation_id])
     if @donation.update(confirm: true)
-      redirect_to root_path
+      redirect_to thank_you1_path
     else
       render :show
     end
