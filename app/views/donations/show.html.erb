@@ -5,11 +5,13 @@
     <div class="col-6 col-lg-3">
       <div class="recap-card" style="margin-right: 10px">
         <%# <%= @donation.products.category %>
+        <p>Le nombre de produits :</p>
         <%= @donation.amount %>
       </div>
     </div>
     <div class="col-6 col-lg-3">
       <div class="recap-card">
+        <p>Le lieu de dépôt :</p>
         <%= @donation.warehouse.name %>
       </div>
     </div>
@@ -17,8 +19,12 @@
 
   <div class="recap-card-long justify-content-center">
     <div class="col-12 col-lg-6">
+      <p>Adresse du dépôt :</p>
       <%= @donation.warehouse.address %>
       <p>Horaires d'ouverture :</p>
+      <% if @donation.warehouse.opening_hours %>
+        <%= @donation.warehouse.opening_hours %>
+      <% end %>
       <p>Coordonnées :</p>
       <% if @donation.warehouse.number %>
         <%= @donation.warehouse.number %>
@@ -26,7 +32,7 @@
     </div>
   </div>
 
-  <div class="row justify-content-center" style="background-color: #900C3F">
+  <div class="justify-content-center">
     <div class="col-12 col-lg-6">
       <%= link_to "Confirmation", root_path, class: "btn-recap" %>
     </div>
