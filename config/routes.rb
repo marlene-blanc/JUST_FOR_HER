@@ -9,12 +9,16 @@ Rails.application.routes.draw do
     patch "/select_warehouse", to: "donations#update_warehouse"
     patch "/confirm", to: "donations#confirm"
   end
-  #get "select_warehouse", to: "donations#select_warehouse"
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+
+  resources :orders, only: [:show, :create] do
+    resources :payments, only: :new
+  end
+
+  mount StripeEvent::Engine, at: '/stripe-webhooks'
+
   get "/thank_you1", to: "donations#thank_you1"
-  # Defines the root path route ("/")
-  # root "articles#index"
 end
+
 # Donations_Controller
 # def select_warehouse
 #    @warehouse =  Warehouse.new

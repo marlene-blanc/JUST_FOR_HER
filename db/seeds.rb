@@ -7,7 +7,6 @@
 #   Character.create(name: "Luke", movie: movies.first)
 Product.destroy_all
 
-User.destroy_all
 
 user_1 = User.create(first_name: 'Maxime', last_name: 'Martel', email: 'toto@gmail.com', password: 'tototo', nickname: 'Max')
 
@@ -30,3 +29,9 @@ Warehouse.create!(name: "Emmaüs 1er", number: "0475916372", opening_hours: "Du 
 Warehouse.create!(name: "Restos du Coeur", number: "0432768791", opening_hours: "Du lundi au vendredi de 9h à 19h", address: "28 boulevard de la Padouane, Marseille", max_quantity: 300, actual_quantity: 62)
 Warehouse.create!(name: "Café Associatif La Fourchette", number: "0424185953", opening_hours: "Du lundi au vendredi de 9h à 19h", address: "8 Chemin de Raguse, Marseille", max_quantity: 100, actual_quantity: 41)
 puts "Finished warehouses"
+
+donation1 = Donation.create(price_cents: 5)
+donation2 = Donation.create(price_cents: 10)
+donation3 = Donation.create(price_cents: 15)
+
+User.destroy_all

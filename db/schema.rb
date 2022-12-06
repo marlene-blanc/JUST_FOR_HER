@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_02_111148) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_06_084928) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -31,8 +31,22 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_02_111148) do
     t.boolean "confirm", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "price_cents", default: 0, null: false
     t.index ["user_id"], name: "index_donations_on_user_id"
     t.index ["warehouse_id"], name: "index_donations_on_warehouse_id"
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.string "state"
+    t.string "donation"
+    t.string "checkout_session_id"
+    t.bigint "user_id", null: false
+    t.bigint "donation_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "price_cents", default: 0, null: false
+    t.index ["donation_id"], name: "index_orders_on_donation_id"
+    t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
   create_table "products", force: :cascade do |t|
@@ -75,4 +89,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_02_111148) do
   add_foreign_key "donated_products", "products"
   add_foreign_key "donations", "users"
   add_foreign_key "donations", "warehouses"
+  add_foreign_key "orders", "donations"
+  add_foreign_key "orders", "users"
 end
