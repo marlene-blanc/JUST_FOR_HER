@@ -12,8 +12,8 @@ User.destroy_all
 user_1 = User.create(first_name: 'Maxime', last_name: 'Martel', email: 'toto@gmail.com', password: 'tototo', nickname: 'Max')
 
 puts "Creating products"
-Product.create!(category: "Napkins")
-Product.create!(category: "Pads")
+Product.create!(category: "Serviettes")
+Product.create!(category: "Tampons")
 Product.create!(category: "Cup")
 puts "Finished products"
 

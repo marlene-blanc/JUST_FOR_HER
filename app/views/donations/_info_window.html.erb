@@ -1,7 +1,7 @@
 <div class="info-card">
   <h2><%= warehouse.name %></h2>
   <p><%= warehouse.address %></p>
-  <p>Horaires d'ouverture :</p>
+  <p><%= warehouse.opening_hours %></p>
   <%= form_with url: donation_select_warehouse_path(donation), method: :patch do |f| %>
     <%= f.hidden_field :warehouse_id, value: warehouse.id %>
     <div class="product_submit">
