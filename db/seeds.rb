@@ -40,7 +40,6 @@ puts "Finished products"
 #Product.create!(category: "Tampons")
 #Product.create!(category: "Cup")
 
-Donation.destroy_all
 
 # puts "Creating donations"
 # Donation.create!(confirm: "False", amount: "3")
