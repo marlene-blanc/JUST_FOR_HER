@@ -22,10 +22,6 @@ input[type=submit]:hover {
   border: 0;
 }
 
-#new_title{
-  text-align: center;
-  margin-bottom: 30px;
-}
 .row_new{
   text-align: center;
 }
@@ -51,8 +47,12 @@ input[type=number]{
   width: 290px;
   padding-bottom: 20px;
   margin-bottom: 30px;
+
+
+
 }
 .cards{
   display: flex;
   justify-content: center;
+  text-align: center;
 }

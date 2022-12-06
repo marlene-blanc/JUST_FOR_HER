@@ -106,6 +106,10 @@ class DonationsController < ApplicationController
     @products = Product.all
   end
 
+  def financial_show
+    @donation = Donation.new
+  end
+
   private
 
   def warehouse_params
