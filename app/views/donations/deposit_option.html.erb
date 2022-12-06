@@ -3,6 +3,7 @@
   <div class="row justify-content-center">
     <div class="col-12 col-lg-6">
 
+
       <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
@@ -18,6 +19,9 @@
 
       <h1 id="deposit_title"> Comment je donne ? </h1>
 
+
+    
+
         <ul class="deposit_buttons">
           <div class="bouton_depôt">
             <%= link_to "Confier à un point de dépôt", donation_select_warehouse_path(@donation), class: "btn btn-ghost" %>
@@ -27,7 +31,9 @@
 
           </div>
           <div class= "button_back_products">
+
             <%= link_to "Retour aux produits", new_donation_path + "?donation_id=#{@donation.id}", class: "btn btn-ghost" %>
+
           </div>
         </ul>
     </div>

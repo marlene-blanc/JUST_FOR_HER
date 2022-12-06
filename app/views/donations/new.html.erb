@@ -1,6 +1,7 @@
 
 <div class="container">
-  <div class="row_new">
+  <div class="row justify-content-center">
+
 
     <div class="col-12 col-lg-6">
 
@@ -13,6 +14,7 @@
             <div class= "product_card">
               <label class="category_label" for="<%= product.category %>"><%= product.category %></label>
               <input type="number" id="Quantité de <%= product.category %>" name="products[<%= product.id %>]" value="<%= @donation.donated_products.find_by(product: product)&.quantity %>">
+
             </div>
           <% end %>
           <div class="product_submit">
