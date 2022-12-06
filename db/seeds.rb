@@ -50,11 +50,7 @@ puts "Finished products"
 
 
 puts "Creating warehouses"
-# file = URI.open("https://res.cloudinary.com/dve4ns8fw/image/upload/v1670318742/icone_point_depot_prdi7a.jpg")
-# warehouse_emmaus1 = Warehouse.new(name: "Communaute Emmaüs", number: "0491894066", opening_hours: "Du lundi au vendredi de 9h à 19h", address: "46 boulevard Cartonnerie 13011 Marseille", max_quantity: 150, actual_quantity: 56)
-# warehouse_emmaus1.photo.attach(io: file, filename: "icone_point_depot_prdi7a.jpg", content_type: "image/jpgs")
-# warehouse_emmaus1.save
-
+warehouse_emmaus = Warehouse.create!(name: "Communaute Emmaüs", number: "0491894066", opening_hours: "Du lundi au vendredi de 9h à 19h", address: "46 boulevard Cartonnerie 13011 Marseille", max_quantity: 150, actual_quantity: 56)
 warehouse_emmaus = Warehouse.create!(name: "Familles Emmaus", number: "0961473644", opening_hours: "Du lundi au vendredi de 9h à 19h", address: "35 boulevard de la Liberté 13001 Marseille", max_quantity: 250, actual_quantity: 36)
 warehouse_emmaus = Warehouse.create!(name: "Marseille Emmaus", number: "0491914560", opening_hours: "Du lundi au vendredi de 9h à 19h", address: " 3 rue Colbert 13001 Marseille", max_quantity: 150, actual_quantity: 23)
 warehouse_emmaus = Warehouse.create!(name: "Association Emmaus", number: "0484332436", opening_hours: "Du lundi au vendredi de 9h à 19h", address: "2 boulevard Georges Clemenceau 13004 Marseille  -  Y aller", max_quantity: 180, actual_quantity: 12)
