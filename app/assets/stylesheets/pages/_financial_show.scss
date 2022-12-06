@@ -1,5 +1,5 @@
 .big_container {
-margin: 50px;
+margin: 40px;
 display: flex;
 justify-content: center space-between;
 flex-direction: column;
@@ -13,4 +13,20 @@ flex-direction: column;
   background-color: #c812bd;
   text-transform: uppercase;
   margin-bottom: auto;
+}
+
+.asma-btn{
+  color: #c812bd;
+  text-decoration: none;
+  border: 1px solid #c812bd;
+  padding: 10px 28px;
+  border-radius: 30px;
+  &:hover {
+    color: #7a0673;
+  }
+}
+.description{
+  font-size: 1.4rem;
+  color: grey;
+  font-family: Helvetica, Arial, sans-serif;
 }
