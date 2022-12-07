@@ -72,7 +72,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_06_101929) do
     t.bigint "donation_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "price_cents", default: 0, null: false
     t.index ["donation_id"], name: "index_orders_on_donation_id"
     t.index ["user_id"], name: "index_orders_on_user_id"
   end
