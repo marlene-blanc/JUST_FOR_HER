@@ -29,9 +29,7 @@
 
           <div class= "button_back_products">
 
-            <%= link_to new_donation_path do %>
-            <%= image_tag("https://res.cloudinary.com/dve4ns8fw/image/upload/v1670414831/don_prod_115_gkhgbw.png") %>
-            <% end %>
+            <%= link_to image_tag("https://res.cloudinary.com/dve4ns8fw/image/upload/v1670414831/don_prod_115_gkhgbw.png"), new_donation_path + "?donation_id=#{@donation.id}" %>
           </div>
 
         </ul>
