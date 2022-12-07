@@ -47,12 +47,14 @@ input[type=number]{
   width: 290px;
   padding-bottom: 20px;
   margin-bottom: 30px;
-
-
-
 }
 .cards{
   display: flex;
   justify-content: center;
   text-align: center;
+}
+#new_title{
+  text-align: center;
+  background-color: #c812bd;
+  color: white;
 }
