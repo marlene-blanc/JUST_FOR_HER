@@ -3,7 +3,6 @@
   <div class="recap-cards justify-content-center">
     <div class="col-6 col-lg-3">
       <div class="recap-card" style="margin-right: 10px">
-        <%# <%= @donation.products.category %>
         <div class="icone_recap">
           <i class="fa-solid fa-hand-holding-heart"></i>
         </div>
@@ -50,6 +49,7 @@
           <p>Adresse du dépôt :</p>
         </div>
         <%= @donation.warehouse.address %>
+        <%= @donation.warehouse.city %>
       </div>
       <div style="margin-bottom: 6px">
         <div class="Intitulés">
