@@ -1,7 +1,7 @@
 .product_submit{
   display: flex;
   justify-content: center;
-  margin-top: 100px;
+  margin-top: 50px;
 
 }
 input[type=submit] {
@@ -25,22 +25,30 @@ input[type=submit]:hover {
 .row_new{
   text-align: center;
 }
-.category_label{
-  margin-top: 6px;
+.category_label {
+  margin-top: 35px;
   display: flex;
   justify-content: center;
 }
 input[type=number]{
   border-radius: 30px;
   width: 70px;
+  height: 50px;
   border: grey;
-
+  margin-top: 20px;
 }
+
+
 .product_card{
+  display: flex;
+  justify-content: space-around;
   background-color: #f1f1f1;
   border-radius: 8px;
-  width: 250px;
+  width: 290px;
   padding-bottom: 20px;
+  margin-bottom: 30px;
+
+
 
 }
 .cards{

@@ -2,22 +2,28 @@
 <div class="container">
   <div class="row justify-content-center">
 
-      <div class="col-12 col-lg-6">
-        <h1 class="home_title">Create a donation</h1>
-        <p>Thank you for your initiative <%= current_user.first_name %> ! Here you can choose your donation method and the items you will donate</p>
-          <div class="cards">
-            <%= simple_form_for @donation do |f| %>
-              <%  @products.all.each do |product| %>
-                <div class= "product_card">
-                  <label class="category_label" for="<%= product.category %>"><%= product.category %></label>
-                  <input type="number" id=" Quantité de <%= product.category %>" name="products[<%= product.id %>]">
-                </div>
-              <% end %>
+
+    <div class="col-12 col-lg-6">
+
+      <h1 id="new_title"> Faites un don </h1>
+
+      <p>Merci pour votre initiative <%= current_user.first_name %> ! Ici vous pourrez choisir votre modalité de don ainsi que les articles que vous allez donner</p>
+      <div class="cards">
+        <%= simple_form_for @donation do |f| %>
+
+          <%  @products.all.each do |product| %>
+            <div class= "product_card">
+            <%= cl_image_tag product.photo.key, width: 90, height: 90, crop: :fill %>
+              <label class="category_label" for="<%= product.category %>"><%= product.category %></label>
+              <input type="number" id="Quantité de <%= product.category %>" name="products[<%= product.id %>]" value="<%= @donation.donated_products.find_by(product: product)&.quantity %>">
+
             </div>
-          <div class="product_submit">
-            <%= f.submit %>
-          </div>
           <% end %>
+          <div class="product_submit">
+            <%= f.submit "Donner" %>
+          </div>
+        <% end %>
       </div>
+    </div>
   </div>
 </div>

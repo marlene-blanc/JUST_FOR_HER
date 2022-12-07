@@ -14,9 +14,9 @@
 .recap-card {
   border: 1px solid #c812bd;
   border-radius: 4px;
-  background-color: white;
-  color: #c812bd;
-  height: 200px;
+  background-color: rgba(200, 18, 189, 0.6);
+  color: white;
+  height: 240px;
   margin-bottom: 20px;
   padding: 20px;
 }
@@ -25,8 +25,8 @@
   display: flex;
   border: 1px solid #c812bd;
   border-radius: 4px;
-  background-color: white;
-  color: #c812bd;
+  background-color: rgba(200, 18, 189, 0.6);
+  color: white;
   height: 240px;
   padding: 20px;
   margin-bottom: 40px;
@@ -41,4 +41,9 @@
   &:hover {
     color: #7a0673;
   }
+}
+.home_title{
+  background-color: rgba(200, 18, 189, 0.6);
+  border-radius: 4px;
+  margin-bottom: 5px;
 }
