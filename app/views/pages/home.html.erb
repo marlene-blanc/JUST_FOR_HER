@@ -27,10 +27,14 @@
 
       <div class="buttons">
         <div class="bouton_materiel">
-          <%= link_to "Don matériel", new_donation_path , class: "btn btn-ghost" %>
+          <%= link_to new_donation_path do %>
+            <%= image_tag("https://res.cloudinary.com/dve4ns8fw/image/upload/v1670418542/don_ma_115_qgqnin.png") %>
+          <% end %>
         </div>
         <div class="bouton_financier">
-          <%= link_to "Don financier", financial_show_path, class: "btn btn-ghost" %>
+        <%= link_to financial_show_path do %>
+            <%= image_tag("https://res.cloudinary.com/dve4ns8fw/image/upload/v1670414831/don_fi_115_mrt0kf.png") %>
+          <% end %>
         </div>
       </div>
   </div>
