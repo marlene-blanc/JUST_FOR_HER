@@ -1,45 +1,49 @@
-
 <h1 class="show_title">Dons financiers</h1>
-  <div class ="big_container">
+<div class ="big_container">
+  <h2>Merci de choisir le montant de votre donation :</h2>
+  <div class="first-row">
     <div>
-      <section>
-        <div class="product">
-          <img src="https://res.cloudinary.com/dve4ns8fw/image/upload/v1670317494/JFH_50_rond_kvqrux.svg" alt="The cover of Stubborn Attachments" />
-        </div>
+      <div class="icone">
+        <img src="https://res.cloudinary.com/dve4ns8fw/image/upload/v1670317494/JFH_50_rond_kvqrux.svg" alt="The cover of Stubborn Attachments" />
+      </div>
+      <div class="btn-stripe">
         <form action="/create-checkout-session" method="POST">
-          <button type="submit" class="asma-btn" id="checkout-button"><%= link_to "Faites un don de 5€", "https://donate.stripe.com/test_14k8wL7wY8E9gGQ8ww" %></button>
+          <button type="submit" class="asma-btn" id="checkout-button"><%= link_to "5€", "https://donate.stripe.com/test_14k8wL7wY8E9gGQ8ww" %></button>
         </form>
-      </section>
+      </div>
     </div>
     <div>
-      <section>
-        <div class="product">
-          <img src="https://res.cloudinary.com/dve4ns8fw/image/upload/v1670317494/JFH_50_rond_kvqrux.svg" alt="The cover of Stubborn Attachments" />
-        </div>
+      <div class="icone">
+        <img src="https://res.cloudinary.com/dve4ns8fw/image/upload/v1670317494/JFH_50_rond_kvqrux.svg" alt="The cover of Stubborn Attachments" />
+      </div>
+      <div class="btn-stripe">
         <form action="/create-checkout-session" method="POST">
-          <button type="submit"class="asma-btn" id="checkout-button"><%= link_to "Faites un don de 10€", "https://donate.stripe.com/test_28ocN17wYbQl76g9AB" %></button>
+          <button type="submit"class="asma-btn" id="checkout-button"><%= link_to "10€", "https://donate.stripe.com/test_28ocN17wYbQl76g9AB" %></button>
         </form>
-        </section>
-    </div>
-    <div>
-      <section>
-        <div class="product">
-          <img src="https://res.cloudinary.com/dve4ns8fw/image/upload/v1670317494/JFH_50_rond_kvqrux.svg" alt="The cover of Stubborn Attachments" />
-        </div>
-        <form action="/create-checkout-session" method="POST">
-          <button type="submit"class="asma-btn" id="checkout-button"><%= link_to "Faites un don de 20€", "https://donate.stripe.com/test_8wM6oD7wY7A5eyIaEG" %></button>
-        </form>
-      </section>
-    </div>
-    <div>
-      <section>
-          <div class="product">
-            <img src="https://res.cloudinary.com/dve4ns8fw/image/upload/v1670317494/JFH_50_rond_kvqrux.svg" alt="The cover of Stubborn Attachments" />
-          </div>
-          <form action="/create-checkout-session" method="POST">
-            <button type="submit" class="asma-btn"id="checkout-button"><%= link_to "Autres montants", "https://donate.stripe.com/test_eVa7sH4kM8E976g147" %></button>
-          </form>
-        </section>
       </div>
     </div>
   </div>
+
+  <div class="second-row">
+    <div>
+      <div class="icone">
+        <img src="https://res.cloudinary.com/dve4ns8fw/image/upload/v1670317494/JFH_50_rond_kvqrux.svg" alt="The cover of Stubborn Attachments" />
+      </div>
+      <div class="btn-stripe">
+        <form action="/create-checkout-session" method="POST">
+          <button type="submit" class="asma-btn" id="checkout-button"><%= link_to "20€", "https://donate.stripe.com/test_8wM6oD7wY7A5eyIaEG" %></button>
+        </form>
+      </div>
+    </div>
+    <div>
+      <div class="icone">
+        <img src="https://res.cloudinary.com/dve4ns8fw/image/upload/v1670317494/JFH_50_rond_kvqrux.svg" alt="The cover of Stubborn Attachments" />
+      </div>
+      <div class="btn-stripe">
+        <form action="/create-checkout-session" method="POST">
+          <button type="submit" class="asma-btn"id="checkout-button"><%= link_to "Autre", "https://donate.stripe.com/test_eVa7sH4kM8E976g147" %></button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
