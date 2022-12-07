@@ -1,14 +1,26 @@
 <div class="info-card">
   <h2><%= warehouse.name %></h2>
-  <p><%= warehouse.address %></p>
-  <p>Horaires d'ouverture :</p>
-  <p><%= warehouse.opening_hours %></p>
-  <p>Quantité disponible :</p>
-  <p><%= warehouse.actual_quantity %> produits</p>
+  <h6><%= warehouse.address %></h6>
+  <div style="margin-bottom: 6px">
+    <div class="Intitulés">
+      <strong><p>Horaires d'ouverture :</p></strong>
+    </div>
+    <% if warehouse.opening_hours %>
+      <%= warehouse.opening_hours %>
+    <% end %>
+  </div>
+  <div>
+    <div class="Intitulés">
+      <strong><p>Stock actuel :</p></strong>
+    </div>
+    <% if warehouse.actual_quantity %>
+      <p><%= warehouse.actual_quantity %> produits</p>
+    <% end %>
   <%= form_with url: donation_select_warehouse_path(donation), method: :patch do |f| %>
     <%= f.hidden_field :warehouse_id, value: warehouse.id %>
     <div class="product_submit">
       <%= f.submit "Choisir ce lieu" %>
     </div>
   <% end %>
+  </div>
 </div>

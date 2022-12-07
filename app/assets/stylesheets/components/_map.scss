@@ -5,6 +5,10 @@
 .mapboxgl-popup-content {
   text-align: center;
   font-family: "Open Sans", sans-serif;
+  border-radius: 16px;
+  color: #4e8ca4f3;
+  background-color: rgba(255, 255, 255, 0.877) !important;
+  height: 298px;
 }
 
 .info-card a {
