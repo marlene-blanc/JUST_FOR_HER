@@ -3,6 +3,8 @@
   <p><%= warehouse.address %></p>
   <p>Horaires d'ouverture :</p>
   <p><%= warehouse.opening_hours %></p>
+  <p>Quantité disponible :</p>
+  <p><%= warehouse.actual_quantity %> produits</p>
   <%= form_with url: donation_select_warehouse_path(donation), method: :patch do |f| %>
     <%= f.hidden_field :warehouse_id, value: warehouse.id %>
     <div class="product_submit">
