@@ -9,6 +9,9 @@ Rails.application.routes.draw do
     patch "/confirm", to: "donations#confirm"
     patch "/add_financial_amount", to: "donations#add_financial_amount"
   end
+
+  get "/thank_you1", to: "donations#thank_you1"
+
   get "/financial_show", to: "donations#financial_show"
   get "/thank_you1", to: "donations#thank_you1"
 
@@ -22,6 +25,11 @@ end
 # @warehouse =  Warehouse.new
 # end
 
+
+# Donations_Controller
+# def select_warehouse
+#    @warehouse =  Warehouse.new
+# end
 
 # simple_form_for @warehouse
 # button => méthode create du controller Warehouse, redirect_to => donation/:id/confirm
