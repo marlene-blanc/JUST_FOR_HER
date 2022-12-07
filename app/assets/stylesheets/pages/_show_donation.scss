@@ -63,15 +63,31 @@
   font-size: 40px;
 }
 .Intitulés{
-  margin-top: 15px;
+  margin-top: 10px;
   margin-bottom: -15px;
   font-weight: bold;
 }
 #icone_recap{
   margin-top: -10px;
 }
+#icone_stockage{
+  margin-top: 16px;
+}
 .product_submit_recap{
     display: flex;
     justify-content: center;
     margin-top: 40px;
+}
+#Stock{
+width: 90%;
+color: #c812bd;
+}
+#Intitulé_stock{
+  font-weight: bold;
+  margin-top: 2px;
+}
+#warehouse_actual_quantity{
+  width: 90%;
+  padding-right: 10px;
+  font-size: 1rem;
 }

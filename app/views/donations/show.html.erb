@@ -28,9 +28,20 @@
           <p>Nom du dépôt :</p>
         </div>
           <%= @donation.warehouse.name %>
+        <div id="icone_stockage">
+          <i class="fa-solid fa-box"></i>
+          <div id="Intitulé_stock">
+            <label for="actual_quantity">Stock actuel:</label>
+          </div>
+          <p><%= @donation.warehouse.actual_quantity %></p>
+
+        </div>
       </div>
     </div>
   </div>
+
+
+
 
   <div class="recap-card-long justify-content-center">
     <div class="col-12 col-lg-6">
