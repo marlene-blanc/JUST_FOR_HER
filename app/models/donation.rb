@@ -1,7 +1,7 @@
 class Donation < ApplicationRecord
   belongs_to :user
   belongs_to :warehouse, optional: true
-  has_many :donations
+  has_many :orders
 
   has_many :donated_products
   has_many :products, through: :donated_products

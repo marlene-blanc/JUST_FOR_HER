@@ -14,7 +14,9 @@
     <div class="col-6 col-lg-3">
       <div class="recap-card">
         <p>Place of deposit :</p>
-        <%= @donation.warehouse.name %>
+        <% if @donation.warehouse.name %>
+          <%= @donation.warehouse.name %>
+        <% end %>
       </div>
     </div>
   </div>

@@ -1,4 +1,3 @@
-Money.locale_backend = :currency
 # encoding : utf-8
 
 MoneyRails.configure do |config|
