@@ -2,20 +2,20 @@
   <div class="row justify-content-center">
     <div class="col-12 col-lg-6">
 
-        <div class="thank">
-          <div>
-            <p>Merci <%= current_user.first_name %>!
-            Grâce à vous, depuis le 21 novembre, nous avons aidé 150 femmes. Soit au total 320 produits distribués.</p>
-          </div>
-          <div>
-            <p>Vous pouvez également contribuer financièrement en soumettant votre don directement sur la plateforme:</p>
-          </div>
-
+      <div class="thank">
+        <p>Merci <%= current_user.first_name %>!
+          Grâce à vous, depuis le 21 novembre, nous avons aidé 150 femmes. Soit au total 320 produits distribués.</p>
+        <div id="suggest_€">
+          <p>Vous pouvez également contribuer financièrement en soumettant votre don directement sur la plateforme:</p>
         </div>
       </div>
-        <div class="bouton_no_financial_gift">
-          <%= link_to "Pas de contribution financière", success_path , class: "btn btn-ghost" %>
-        </div>
+      <div class="bouton_no_financial_gift">
+        <%= link_to "Pas de contribution financière", success_path , class: "btn btn-ghost" %>
+      </div>
+
+
+
+      <div>
         <div class="sections">
           <section>
             <div class="product_€">

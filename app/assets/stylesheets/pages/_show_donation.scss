@@ -16,8 +16,8 @@
   border-radius: 4px;
   background-color: rgba(200, 18, 189, 0.6);
   color: white;
-  height: 240px;
-  margin-bottom: 20px;
+  height: 270px;
+  margin-bottom: 12px;
   padding: 20px;
 }
 
@@ -28,7 +28,7 @@
   background-color: rgba(200, 18, 189, 0.6);
   color: white;
   height: 240px;
-  padding: 20px;
+  padding: 5px;
   margin-bottom: 40px;
 }
 
@@ -42,8 +42,36 @@
     color: #7a0673;
   }
 }
-.home_title{
+#home_title{
+  border: 1px solid #c812bd;
   background-color: rgba(200, 18, 189, 0.6);
   border-radius: 4px;
+  margin-top: -20px;
   margin-bottom: 5px;
+  color: white;
+}
+
+.recap_item{
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: -4px;
+}
+#item_quantity{
+  margin-top: 15px;
+}
+.fa-solid{
+  font-size: 40px;
+}
+.Intitulés{
+  margin-top: 15px;
+  margin-bottom: -15px;
+  font-weight: bold;
+}
+#icone_recap{
+  margin-top: -10px;
+}
+.product_submit_recap{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
 }
