@@ -14,7 +14,7 @@ User.destroy_all
 
 
 user_1 = User.create(first_name: 'Maxime', last_name: 'Martel', email: 'toto@gmail.com', password: 'tototo', nickname: 'Max')
-
+user_1 = User.create(first_name: 'Maxime', last_name: 'Martel', email: 'tata@gmail.com', password: 'tatata', nickname: 'Max')
 
 puts "Creating products"
 file = URI.open("https://res.cloudinary.com/dve4ns8fw/image/upload/v1670317615/Serviette_100_resume.svg")
