@@ -4,17 +4,24 @@ h3{
 .logo_thank2{
   display: flex;
   justify-content: center;
-  margin-top: 100px;
-  opacity: 0.3;
+  margin-top: 70px;
+  opacity: 0.2;
 }
 .logo_thank{
   text-align: center;
   width: 60%;
 }
-.thank{
-  margin-top: 30px;
-  text-align: center;
+.success_thank{
+    text-align: center;
+    background-color: rgba(200, 18, 189, 0.6);
+    color: white;
+    padding: 5px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    margin-top: 5;
+    margin-bottom: 10px;
 }
+
 .thanks{
   margin-top: 25px;
   margin-bottom: 30px;

@@ -15,7 +15,6 @@ User.destroy_all
 
 user_1 = User.create(first_name: 'Maxime', last_name: 'Martel', email: 'toto@gmail.com', password: 'tototo', nickname: 'Max')
 
-
 puts "Creating products"
 file = URI.open("https://res.cloudinary.com/dve4ns8fw/image/upload/v1670317615/Serviette_100_resume.svg")
 product1 = Product.new(category: "Serviettes")
@@ -32,9 +31,6 @@ product3 = Product.new(category: "Cups")
 product3.photo.attach(io: file, filename: "cup_100_baukau.svg", content_type: "image/svg")
 product3.save
 puts "Finished products"
-
-
-
 
 #Product.create! (category: "Serviettes")
 #Product.create!(category: "Tampons")
@@ -66,3 +62,5 @@ warehouse_resto = Warehouse.create!(name: "Restaurants Du Coeur", number: "04961
 # warehouse_resto.save
 
 puts "Finished warehouses"
+
+User.destroy_all

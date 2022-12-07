@@ -1,4 +1,8 @@
 class DonationsController < ApplicationController
+  def index
+    @donations = Donation.all
+  end
+
   def show
     @donation = Donation.find(params[:id])
   end
@@ -69,7 +73,7 @@ class DonationsController < ApplicationController
         lat: warehouse.latitude,
         lng: warehouse.longitude,
         info_window: render_to_string(partial: "info_window", locals: { warehouse: warehouse, donation: @donation}),
-        image_url: helpers.asset_url("logo.png")
+        image_url: helpers.asset_url("https://res.cloudinary.com/dve4ns8fw/image/upload/v1669888138/icone_navbar_rond_fzn27c.svg")
       }
     end
   end

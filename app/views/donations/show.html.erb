@@ -1,39 +1,68 @@
 <div class="recap-container">
-  <h1 class="home_title">Summary of your donation</h1>
+  <h1 id="home_title">Récapitulatif de votre don</h1>
   <div class="recap-cards justify-content-center">
     <div class="col-6 col-lg-3">
       <div class="recap-card" style="margin-right: 10px">
         <%# <%= @donation.products.category %>
-        <p>Produits :</p>
-
-        <%= @donation.amount %>
-        <% @donation.donated_products.each do |dp| %>
-          <p><%= dp.product.category %> * <%= dp.quantity %> unité(s)</p>
-        <% end %>
+        <div class="icone_recap">
+          <i class="fa-solid fa-hand-holding-heart"></i>
+        </div>
+        <div class="Intitulés">
+         <p>Produits:</p>
+        </div>
+          <%= @donation.amount %>
+          <% @donation.donated_products.each do |dp| %>
+        <div class= recap_item>
+          <%= cl_image_tag dp.product.photo.key, width: 50, height: 50, crop: :fill %>
+            <p id="item_quantity"> X <%= dp.quantity %></p> <%#<%= dp.product.category %>
+        </div>
+          <% end %>
       </div>
     </div>
     <div class="col-6 col-lg-3">
       <div class="recap-card">
-        <p>Lieu du dépôt :</p>
-        <%= @donation.warehouse.name %>
+        <div class="icone_recap">
+          <i class="fa-solid fa-truck-fast"></i>
+        </div>
+        <div class="Intitulés">
+          <p>Nom du dépôt :</p>
+        </div>
+          <%= @donation.warehouse.name %>
+        <div id="icone_stockage">
+          <i class="fa-solid fa-box"></i>
+          <div id="Intitulé_stock">
+            <label for="actual_quantity">Stock actuel:</label>
+          </div>
+          <p><%= @donation.warehouse.actual_quantity %></p>
+
+        </div>
       </div>
     </div>
   </div>
 
+
+
+
   <div class="recap-card-long justify-content-center">
     <div class="col-12 col-lg-6">
       <div style="margin-bottom: 6px">
-        <p>Adresse du dépôt :</p>
+        <div class="Intitulés">
+          <p>Adresse du dépôt :</p>
+        </div>
         <%= @donation.warehouse.address %>
       </div>
       <div style="margin-bottom: 6px">
-        <p>Horaires d'ouverture :</p>
+        <div class="Intitulés">
+          <p>Horaires d'ouverture :</p>
+        </div>
         <% if @donation.warehouse.opening_hours %>
           <%= @donation.warehouse.opening_hours %>
         <% end %>
       </div>
       <div>
-        <p>Contact details:</p>
+        <div class="Intitulés">
+          <p>Contact details:</p>
+        </div>
         <% if @donation.warehouse.number %>
           <%= @donation.warehouse.number %>
         <% end %>
@@ -44,7 +73,7 @@
   <div class="justify-content-center">
     <div class="col-12 col-lg-6">
       <%= form_with url: donation_confirm_path(@donation), method: :patch do |f| %>
-        <div class="product_submit">
+        <div class="product_submit_recap">
           <%= f.submit "Confirmer 👍" %>
         </div>
       <% end %>
