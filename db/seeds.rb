@@ -7,6 +7,7 @@
 #   Character.create(name: "Luke", movie: movies.first)
 require "open-uri"
 
+DonatedProduct.destroy_all
 Product.destroy_all
 Donation.destroy_all
 Warehouse.destroy_all
@@ -62,5 +63,3 @@ warehouse_resto = Warehouse.create!(name: "Restaurants Du Coeur", number: "04961
 # warehouse_resto.save
 
 puts "Finished warehouses"
-
-User.destroy_all

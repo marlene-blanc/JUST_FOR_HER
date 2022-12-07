@@ -5,13 +5,12 @@
 }
 
 input[type=submit] {
-  color: $pinkjfh;
-  background-color: white;
-  border: 1px solid #4A4A4A;
+  color: white;
+  background-color: #c812bd;
+  border: 1px solid #c812bd;
   padding: 8px 24px;
   border-radius: 50px;
-  font-weight: lighter;
-  opacity: 0.6;
+  font-weight: bold;
   transition: opacity 0.3s ease;
   text-decoration: none;
 
@@ -31,6 +30,7 @@ input[type=submit]:hover {
   justify-content: center;
 }
 input[type=number]{
+  text-align: center;
   border-radius: 30px;
   width: 70px;
   height: 50px;

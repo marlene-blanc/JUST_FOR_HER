@@ -16,7 +16,7 @@
   border-radius: 4px;
   background-color: rgba(200, 18, 189, 0.6);
   color: white;
-  height: 270px;
+  height: 300px;
   margin-bottom: 12px;
   padding: 20px;
 }
@@ -54,7 +54,6 @@
 .recap_item{
   display: flex;
   justify-content: space-around;
-  margin-bottom: -4px;
 }
 #item_quantity{
   margin-top: 15px;
@@ -64,7 +63,7 @@
 }
 .Intitulés{
   margin-top: 10px;
-  margin-bottom: -15px;
+  margin-bottom: -13px;
   font-weight: bold;
 }
 #icone_recap{
@@ -74,20 +73,25 @@
   margin-top: 16px;
 }
 .product_submit_recap{
-    display: flex;
-    justify-content: center;
-    margin-top: 40px;
+
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
 }
 #Stock{
-width: 90%;
-color: #c812bd;
+  width: 90%;
+  color: #c812bd;
 }
 #Intitulé_stock{
   font-weight: bold;
-  margin-top: 2px;
+  margin-top: 7px;
 }
 #warehouse_actual_quantity{
   width: 90%;
   padding-right: 10px;
   font-size: 1rem;
+}
+.product_submit_recap{
+opacity: 0.6;
+
 }
