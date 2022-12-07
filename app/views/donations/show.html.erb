@@ -32,13 +32,16 @@
           <i class="fa-solid fa-box"></i>
           <div id="Intitulé_stock">
             <label for="actual_quantity">Stock actuel:</label>
+            <progress id="warehouse_actual_quantity" max="<%=@donation.warehouse[:max_quantity]%>" value="<%=@donation.warehouse[:actual_quantity]%>"></progress>
           </div>
-          <p><%= @donation.warehouse.actual_quantity %></p>
-
+          <div class="produits_stock">
+            <p><%= @donation.warehouse.actual_quantity%> produits</p>
+          </div>
         </div>
       </div>
     </div>
   </div>
+
 
 
 
