@@ -1,7 +1,21 @@
+.show_title{
+  margin-top: 10px;
+  text-align: center;
+  color: #ffffff;
+  background-color: #c812bd;
+  text-transform: uppercase;
+  margin-bottom: auto;
+  width: 404px;
+  margin-left: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
 .big_container {
   margin: 40px;
   a {
     text-decoration: none;
+    color: white;
   }
 }
 
@@ -15,29 +29,16 @@
   justify-content: space-evenly;
 }
 
-.icone {
-  text-align: center;
-}
-
 .btn-stripe {
   text-align: center;
 }
 
-.show_title{
-  margin-top: 10px;
-  text-align: center;
-  color: #ffffff;
-  background-color: #c812bd;
-  text-transform: uppercase;
-  margin-bottom: auto;
-}
-
 .asma-btn {
-  color: #c812bd;
   text-decoration: none;
-  border: 1px solid #c812bd;
-  padding: 10px 28px;
-  border-radius: 30px;
+  border: 1px solid #4473b1bd;
+  background-color: #4473b1bd;
+  padding: 20px 40px;
+  border-radius: 50%;
   text-align: center;
   margin-top: 20px;
   margin-bottom: 30px;
