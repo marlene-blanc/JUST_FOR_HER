@@ -20,21 +20,28 @@
       <h1 id="deposit_title"> Comment je donne ? </h1>
 
 
-    
+
 
         <ul class="deposit_buttons">
           <div class="bouton_depôt">
-            <%= link_to "Confier à un point de dépôt", donation_select_warehouse_path(@donation), class: "btn btn-ghost" %>
+              <%= link_to donation_select_warehouse_path(@donation)do %>
+              <%= image_tag("https://res.cloudinary.com/dve4ns8fw/image/upload/v1670414831/don_liv_115_jcyccr.png") %>
+              <% end %>
           </div>
-          <div class="bouton_particulier">
-            <%= link_to "Remettre à un particulier", donation_select_warehouse_path(@donation), class: "btn btn-ghost" %>
 
+          <div class="bouton_particulier">
+              <%= link_to donation_select_warehouse_path(@donation)do %>
+              <%= image_tag("https://res.cloudinary.com/dve4ns8fw/image/upload/v1670414831/don_part_115_wt9d57.png") %>
+              <% end %>
           </div>
+
           <div class= "button_back_products">
 
-            <%= link_to "Retour aux produits", new_donation_path + "?donation_id=#{@donation.id}", class: "btn btn-ghost" %>
-
+            <%= link_to new_donation_path do %>
+            <%= image_tag("https://res.cloudinary.com/dve4ns8fw/image/upload/v1670414831/don_prod_115_gkhgbw.png") %>
+            <% end %>
           </div>
+
         </ul>
     </div>
   </div>
