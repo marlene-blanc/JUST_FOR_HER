@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-
+<<<<<<< HEAD
+    <title>Just For Her</title>
+=======
+    <%= favicon_link_tag %>
     <title><%=@title %></title>
-
+>>>>>>> origin
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Just for Her est une application mobile pour lutter contre la précarité menstruelle.">
     <meta property="og:title" content="JUST For Her - Luttons contre la précarité menstruelle">
@@ -18,6 +21,9 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <link rel="manifest" href="<%= asset_path 'manifest.json' %>">
+    <%# <%= render 'shared/ios_pwa_links' %>
+
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
 
@@ -25,6 +31,8 @@
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.js"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?version=3.52.1&features=fetch"></script>
     <script src="https://js.stripe.com/v3/"></script>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
   </head>
 
   <body>
