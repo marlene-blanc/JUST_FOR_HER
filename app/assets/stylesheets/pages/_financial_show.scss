@@ -12,11 +12,27 @@
 }
 
 .big_container {
+  position: relative;
   margin: 40px;
   a {
     text-decoration: none;
     color: white;
   }
+  padding-bottom: 300px;
+}
+
+.big_container::before{
+  content: "";
+  position: absolute;
+  background: center;
+  background-image: url(https://res.cloudinary.com/dve4ns8fw/image/upload/v1670317494/icone_navbar-JFH_100_rond_ihfjmg.svg);
+  opacity: 0.1;
+  background-size: 80% auto;
+  background-repeat: no-repeat;
+  top: 310px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
 }
 
 .first-row {
@@ -35,7 +51,7 @@
 
 .asma-btn {
     text-decoration: none;
-    background-color: #4473b1bd;
+    background-color: #bfc4cb94;
     padding: 40px 40px;
     border-radius: 100%;
     text-align: center;
@@ -47,4 +63,10 @@
   font-size: 1.4rem;
   color: grey;
   font-family: Helvetica, Arial, sans-serif;
+}
+.asma-btn a{
+text-decoration: none;
+ color: #c812bd;
+ font-weight: bold;
+ font-size: 20px;
 }
