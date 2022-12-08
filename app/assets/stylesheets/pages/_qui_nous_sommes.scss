@@ -1,0 +1,26 @@
+.titre_qui_nous_sommes{
+  text-align: center;
+  background-color: #c812bd;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.texte_qui_nous_sommes{
+  position: relative;
+  margin-right: 10px;
+  text-align: center;
+  margin-left: 10px;
+  letter-spacing: 2px;
+}
+.texte_qui_nous_sommes::before{
+  content: "";
+  position: absolute;
+  background-image: url(https://res.cloudinary.com/dve4ns8fw/image/upload/v1670317494/icone_navbar-JFH_100_rond_ihfjmg.svg);
+  opacity: 0.1;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  top: 75px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
