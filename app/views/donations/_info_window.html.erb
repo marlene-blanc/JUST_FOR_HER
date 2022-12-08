@@ -1,13 +1,9 @@
 <div class="info-card">
   <h4><%= warehouse.name %></h4>
   <h6><%= warehouse.address %></h6>
-  <h6><%= warehouse.city %></h6>
   <div style="margin-bottom: 6px">
     <div class="Intitulés">
-
-      <strong><p>Horaires d'ouverture </p></strong>
-
-
+      <strong><p>Horaires d'ouverture</p></strong>
     </div>
     <% if warehouse.opening_hours %>
       <%= warehouse.opening_hours %>
@@ -16,7 +12,7 @@
   <div>
     <div class="Intitulés">
 
-      <strong><p>Stock actuel </p></strong>
+      <strong><p>Stock actuel</p></strong>
 
     </div>
     <% if warehouse.actual_quantity %>
