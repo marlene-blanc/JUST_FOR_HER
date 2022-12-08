@@ -1,13 +1,16 @@
 // Specific CSS for your home-page
 
-.home_title{
+.home_title {
   margin-top: 10px;
   text-align: center;
   color: #ffffff;
   background-color: #c812bd;
   text-transform: uppercase;
   margin-bottom: auto;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
+
 .buttons{
   display: flex;
   justify-content: space-around;
@@ -22,6 +25,11 @@
 .p_home {
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+.margin-r-l {
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .justify-text {

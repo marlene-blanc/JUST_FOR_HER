@@ -13,8 +13,8 @@ input[type=submit] {
   font-weight: bold;
   transition: opacity 0.3s ease;
   text-decoration: none;
-
 }
+
 input[type=submit]:hover {
   opacity: 1;
   color: black;
@@ -24,11 +24,13 @@ input[type=submit]:hover {
 .row_new{
   text-align: center;
 }
+
 .category_label {
   margin-top: 35px;
   display: flex;
   justify-content: center;
 }
+
 input[type=number]{
   text-align: center;
   border-radius: 30px;
@@ -38,8 +40,7 @@ input[type=number]{
   margin-top: 20px;
 }
 
-
-.product_card{
+.product_card {
   display: flex;
   justify-content: space-around;
   background-color: #f1f1f1;
@@ -48,13 +49,17 @@ input[type=number]{
   padding-bottom: 20px;
   margin-bottom: 30px;
 }
-.cards{
+
+.cards {
   display: flex;
   justify-content: center;
   text-align: center;
 }
-#new_title{
+
+#new_title {
   text-align: center;
   background-color: #c812bd;
   color: white;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
