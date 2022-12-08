@@ -26,16 +26,18 @@
   margin-top: 5px;
   margin-bottom: 10px;
 }
-.description{
-  padding-top: 20px;
-  padding-left: 10px;
+.sections a{
+ text-decoration: none;
+ color: white;
+ font-weight: bold;
+ font-size: 20px;
 }
-#suggest_€{
-  margin-top: 30px;
-}
-.suggest_€ a{
+.asma-btn_suggest{
   text-decoration: none;
-}
-.suggest_€{
-  margin: -24px;
+  background-color: #4473b1bd;
+  padding: 40px 40px;
+  border-radius: 100%;
+  text-align: center;
+  margin-top: 20px;
+  border: 2px solid #c812bd;
 }

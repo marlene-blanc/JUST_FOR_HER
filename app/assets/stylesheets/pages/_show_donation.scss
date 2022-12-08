@@ -27,9 +27,9 @@
   border-radius: 4px;
   background-color: rgba(200, 18, 189, 0.6);
   color: white;
-  height: 240px;
+  height: 230px;
   padding: 5px;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .btn-recap {
@@ -64,6 +64,7 @@
   font-size: 40px;
 }
 .Intitulés{
+  text-transform: uppercase;
   margin-top: 10px;
   margin-bottom: -13px;
   font-weight: bold;
@@ -85,6 +86,7 @@
   color: #c812bd;
 }
 #Intitulé_stock{
+  text-transform: uppercase;
   font-weight: bold;
   margin-top: 7px;
 }

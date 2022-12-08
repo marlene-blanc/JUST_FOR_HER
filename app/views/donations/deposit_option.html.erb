@@ -1,4 +1,4 @@
-
+<title><%=@title= "Modalités de livraison JUST For Her" %> </title>
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-12 col-lg-6">
@@ -17,19 +17,19 @@
         <ul class="deposit_buttons">
           <div class="bouton_depôt">
               <%= link_to donation_select_warehouse_path(@donation)do %>
-              <%= image_tag("https://res.cloudinary.com/dve4ns8fw/image/upload/v1670414831/don_liv_115_jcyccr.png") %>
+              <%= image_tag("https://res.cloudinary.com/dve4ns8fw/image/upload/v1670494324/bout_liv_heii2z.png") %>
               <% end %>
           </div>
 
           <div class="bouton_particulier">
               <%= link_to donation_select_warehouse_path(@donation)do %>
-              <%= image_tag("https://res.cloudinary.com/dve4ns8fw/image/upload/v1670414831/don_part_115_wt9d57.png") %>
+              <%= image_tag("https://res.cloudinary.com/dve4ns8fw/image/upload/v1670494324/bout_part_gq4jro.png") %>
               <% end %>
           </div>
 
           <div class= "button_back_products">
 
-            <%= link_to image_tag("https://res.cloudinary.com/dve4ns8fw/image/upload/v1670414831/don_prod_115_gkhgbw.png"), new_donation_path + "?donation_id=#{@donation.id}" %>
+            <%= link_to image_tag("https://res.cloudinary.com/dve4ns8fw/image/upload/v1670494324/bout_produit_lrfeza.png"), new_donation_path + "?donation_id=#{@donation.id}" %>
           </div>
 
         </ul>

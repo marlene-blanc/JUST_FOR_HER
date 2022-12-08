@@ -1,3 +1,4 @@
+<title><%=@title= "Suggestion de don financier JUST For Her" %> </title>
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-12 col-lg-6">
@@ -12,51 +13,34 @@
       <div class="bouton_no_financial_gift">
         <%= link_to "Pas de contribution financière", success_path , class: "btn btn-ghost" %>
       </div>
-
-
-
-      <div>
+      <div class="typo_€">
         <div class="sections">
           <section>
-            <div class="product_€">
-              <img src="https://res.cloudinary.com/dve4ns8fw/image/upload/v1670317494/JFH_50_rond_kvqrux.svg" alt="Just for her logo" />
-              <div class="description">
-                <h5>5.00 €</h5>
-              </div>
-            </div>
+
             <form action="/create-checkout-session" method="POST">
-              <div class="suggest_€">
-                <button type="submit" class="asma-btn" id="checkout-button"><%= link_to "Donner", "https://donate.stripe.com/test_14k8wL7wY8E9gGQ8ww" %></button>
+              <div class="suggest_5€">
+                <button type="submit" class="asma-btn_suggest" id="checkout-button"><%= link_to "5 €", "https://donate.stripe.com/test_14k8wL7wY8E9gGQ8ww" %></button>
               </div>
             </form>
           </section>
-          <section>
-            <div class="product_€">
-              <img src="https://res.cloudinary.com/dve4ns8fw/image/upload/v1670317494/JFH_50_rond_kvqrux.svg" alt="Just for her logo" />
-              <div class="description">
-                <h5>10.00 €</h5>
-              </div>
-            </div>
-            <form action="/create-checkout-session" method="POST">
-              <div class="suggest_€">
-                <button type="submit"class="asma-btn" id="checkout-button"><%= link_to "Donner", "https://donate.stripe.com/test_28ocN17wYbQl76g9AB" %></button>
-              </div>
-            </form>
-          </section>
-          <section>
-            <div class="product_€">
-              <img src="https://res.cloudinary.com/dve4ns8fw/image/upload/v1670317494/JFH_50_rond_kvqrux.svg" alt="Just for her logo" />
-              <div class="description">
-                <h5>20.00 €</h5>
-              </div>
-            </div>
-            <form action="/create-checkout-session" method="POST">
-              <div class="suggest_€">
-                <button type="submit"class="asma-btn" id="checkout-button"><%= link_to "Donner", "https://donate.stripe.com/test_8wM6oD7wY7A5eyIaEG" %></button>
-              </div>
-            </form>
-          </section>
+
+            <section>
+              <form action="/create-checkout-session" method="POST">
+                <div class="suggest_10€">
+                  <button type="submit"class="asma-btn_suggest" id="checkout-button"><%= link_to "10 €", "https://donate.stripe.com/test_28ocN17wYbQl76g9AB" %></button>
+                </div>
+              </form>
+            </section>
+
+            <section>
+              <form action="/create-checkout-session" method="POST">
+                <div class="suggest_20€">
+                  <button type="submit"class="asma-btn_suggest" id="checkout-button"><%= link_to "20 €", "https://donate.stripe.com/test_8wM6oD7wY7A5eyIaEG" %></button>
+                </div>
+              </form>
+            </section>
         </div>
+      </div>
+
     </div>
   </div>
-</div>
