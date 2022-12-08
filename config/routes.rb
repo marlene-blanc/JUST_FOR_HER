@@ -17,6 +17,7 @@ Rails.application.routes.draw do
 
   get "/success", to: "donations#success"
 
+  get "/qui_nous_sommes", to: "pages#qui_nous_sommes"
   # Defines the root path route ("/")
   # root "articles#index"
 end
